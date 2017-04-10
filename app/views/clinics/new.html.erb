@@ -1,0 +1,23 @@
+<h1>New Clinic</h1>
+
+<% unless @clinic.errors.empty? %>
+  <div>
+    <%= @clinic.errors.full_messages.to_sentence %>
+  </div>
+<% end %>
+
+<%= form_for @clinic do |f| %>
+  <fieldset>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :offered_at %>
+    <%= f.datetime_field :offered_at %>
+  </fieldset>
+  <%= f.button :submit %>
+<% end %>

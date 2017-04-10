@@ -1,0 +1,7 @@
+<ul>
+  <% @clinics.each do |clinic| %>
+    <li><%= link_to clinic.title, clinic_path(clinic) %></li>
+  <% end %>
+</ul>
+
+<p><%= link_to "Create New Clinic", new_clinic_path %></p>
